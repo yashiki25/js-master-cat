@@ -111,7 +111,7 @@ choices.forEach(choice => {
         break;
       
       case '簡単なアプリや機能を作ってみる':
-        answer4A.classList.remove('hidden');
+        answer4B.classList.remove('hidden');
         currentAnswer = answer4B;
         currentQuestion = question5;
         preQuestion = question4;
