@@ -268,14 +268,17 @@ choices.forEach(choice => {
         answer13A.classList.remove('hidden');
         currentAnswer = answer13A;
         nextQuestion = epilogue;
+
+        nextBtn.textContent = 'ゴール！';
         break;
 
       case 'Google Chartsを使う':
         answer13B.classList.remove('hidden');
         currentAnswer = answer13B;
         nextQuestion = epilogue;
+        
+        nextBtn.textContent = 'ゴール！';
         break;
-
       
     }
   });
@@ -286,6 +289,11 @@ nextBtn.addEventListener('click', () => {
   currentAnswer.classList.add('hidden');
   nextQuestion.classList.remove('hidden');
   next.classList.add('hidden');
+
+  if (nextQuestion === epilogue) {
+    questionNo.textContent = 'Goooal!!';
+    return;
+  }
 
   questionNo.children[1].textContent = (questionNo.children[1].textContent * 1) + 1;
 });
