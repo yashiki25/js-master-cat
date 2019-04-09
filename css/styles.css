@@ -49,10 +49,14 @@ header p {
   font-size: 17px;
 }
 
+strong {
+  color: #07689f;
+}
+
 .img-box {
-  width: 90%;
+  width: 86%;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   border-radius: 2px;
   background-color: #252a34;
 }
@@ -69,7 +73,7 @@ header p {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 50px;
-  padding: 0 20px;
+  padding: 10px 20px;
   border: 2px solid #252a34;
   border-radius: 5px;
   box-shadow: 0 0 0 4px #fff inset;
@@ -262,8 +266,8 @@ footer ul li a:hover {
   /* border: double 5px #3fc1c9; */
   width: 80%;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 0 20px;
   background: #cbf1f5;
   box-shadow: 0px 0px 0px 10px #cbf1f5;
@@ -285,6 +289,10 @@ footer ul li a:hover {
   color: #3fc1c9;
 }
 
+.question7 strong {
+  color: #fff;
+}
+
 .answer6-b li > p {
   font-size: 15px;
   margin-top: 5px;
@@ -301,7 +309,7 @@ footer ul li a:hover {
   background: #fff;
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .hidden {
@@ -361,7 +369,7 @@ footer ul li a:hover {
   }
 
   .img-box {
-    width: 60%;
+    width: 53%;
   }
 
   .cat-img {
@@ -379,6 +387,10 @@ footer ul li a:hover {
 
   .choices li {
     padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .question-no {
     font-size: 20px;
   }
 }
