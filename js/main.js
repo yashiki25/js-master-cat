@@ -1,7 +1,6 @@
 'use strict';
 
-let preQuestion = '';       // 前回の設問
-let currentQuestion = '';   // 現在のの設問
+let nextQuestion = '';   // 現在のの設問
 let currentAnswer = '';     // 今表示している回答
 
 const startBtn = document.getElementById('start');
@@ -35,8 +34,53 @@ const question5 = document.querySelector('.question5');
 const answer5A = document.querySelector('.answer5-a');
 const answer5B = document.querySelector('.answer5-b');
 
+// 256とその他
+const question6 = document.querySelector('.question6');
+const answer6A = document.querySelector('.answer6-a');
+const answer6B = document.querySelector('.answer6-b');
+
+// モダン
+const question7 = document.querySelector('.question7');
+const answer7A = document.querySelector('.answer7-a');
+const answer7B = document.querySelector('.answer7-b');
+
+// 調べ方
+const question8 = document.querySelector('.question8');
+const answer8A = document.querySelector('.answer8-a');
+const answer8B = document.querySelector('.answer8-b');
+
+// エラー対処方法
+const question9 = document.querySelector('.question9');
+const answer9A = document.querySelector('.answer9-a');
+const answer9B = document.querySelector('.answer9-b');
+
+// オンラインもくもく
+const question10 = document.querySelector('.question10');
+const answer10A = document.querySelector('.answer10-a');
+const answer10B = document.querySelector('.answer10-b');
+
+// 英語読めない
+const question11 = document.querySelector('.question11');
+const answer11A = document.querySelector('.answer11-a');
+const answer11B = document.querySelector('.answer11-b');
+
+// 変数名
+const question12 = document.querySelector('.question12');
+const answer12A = document.querySelector('.answer12-a');
+const answer12B = document.querySelector('.answer12-b');
+
+// GoogleChart
+const question13 = document.querySelector('.question13');
+const answer13A = document.querySelector('.answer13-a');
+const answer13B = document.querySelector('.answer13-b');
+
+// エピローグ
+const epilogue = document.querySelector('.epilogue');
+
 const home = document.querySelector('.home');
-const paging = document.querySelector('.paging');
+// const nextBtn = document.querySelector('.next');
+const nextBtn = document.getElementById('next');
+const finishBtn = document.getElementById('finish');
 
 const choices = document.querySelectorAll('.choices li');
 
@@ -46,105 +90,200 @@ startBtn.addEventListener('click', () => {
   question1.classList.remove('hidden');
   home.classList.remove('hidden');
 
-  currentQuestion = question1;
-  //questionHistory.push(question1);
+  nextQuestion = question1;
 });
 
 // 選択肢クリック
 choices.forEach(choice => {
   choice.addEventListener('click', () => {
     // 問題を非表示
-    currentQuestion.classList.add('hidden');
+    nextQuestion.classList.add('hidden');
     // 次へ・戻る表示
-    paging.classList.remove('hidden');
+    next.classList.remove('hidden');
 
     switch (choice.textContent) {
       case 'Mac':
         answer1A.classList.remove('hidden');
         currentAnswer = answer1A;
-        currentQuestion = question2;
-        preQuestion = question1;
+        nextQuestion = question2;
         break;
       
       case 'Windows':
         answer1B.classList.remove('hidden');
         currentAnswer = answer1B;
-        currentQuestion = question2;
-        preQuestion = question1;
+        nextQuestion = question2;
         break;
       
       case 'HTML/CSS':
         answer2A.classList.remove('hidden');
         currentAnswer = answer2A;
-        currentQuestion = question3;
-        preQuestion = question2;
+        nextQuestion = question3;
         break;
       
       case 'FX':
         answer2B.classList.remove('hidden');
         currentAnswer = answer2B;
-        currentQuestion = question3;
-        preQuestion = question2;
-
-        paging.classList.add('hidden');
+        nextQuestion = question3;
         break;
       
       case 'Web学習サイト':
         answer3A.classList.remove('hidden');
         currentAnswer = answer3A;
-        currentQuestion = question4;
-        preQuestion = question3;
+        nextQuestion = question4;
         break;
       
       case '書籍':
         answer3B.classList.remove('hidden');
         currentAnswer = answer3B;
-        currentQuestion = question4;
-        preQuestion = question3;
+        nextQuestion = question4;
         break;
       
-      case '変数、配列、ループ文…プログラミング知識をひたすら習得':
+      case '配列、条件分岐、オブジェクト指向…プログラミング知識をひたすら習得':
         answer4A.classList.remove('hidden');
         currentAnswer = answer4A;
-        currentQuestion = question5;
-        preQuestion = question4;
+        nextQuestion = question5;
         break;
       
       case '簡単なアプリや機能を作ってみる':
         answer4B.classList.remove('hidden');
         currentAnswer = answer4B;
-        currentQuestion = question5;
-        preQuestion = question4;
+        nextQuestion = question5;
         break;
+      
+      case 'プログラミングスクールに通う':
+        answer5A.classList.remove('hidden');
+        currentAnswer = answer5A;
+        nextQuestion = question6;
+        break;
+      
+      case '独学':
+        answer5B.classList.remove('hidden');
+        currentAnswer = answer5B;
+        nextQuestion = question6;
+        break;
+      
+      case '256times':
+        answer6A.classList.remove('hidden');
+        currentAnswer = answer6A;
+        nextQuestion = question7;
+        break;
+      
+      case 'その他のスクール':
+        answer6B.classList.remove('hidden');
+        currentAnswer = answer6B;
+        nextQuestion = question7;
+        break;
+      
+      case '粉もの、大好き':
+        answer7A.classList.remove('hidden');
+        currentAnswer = answer7A;
+        nextQuestion = question8;
+        break;
+      
+      case 'JavaScriptは日々進化している':
+        answer7B.classList.remove('hidden');
+        currentAnswer = answer7B;
+        nextQuestion = question8;
+        break;
+      
+      case '検索のTOPに出た方を信じる':
+        answer8A.classList.remove('hidden');
+        currentAnswer = answer8A;
+        nextQuestion = question9;
+        break;
+      
+      case 'MDNや複数のサイトを確認して最新の情報を収集する':
+        answer8B.classList.remove('hidden');
+        currentAnswer = answer8B;
+        nextQuestion = question9;
+        break;
+      
+      case 'デベロッパーツールのConsoleでどこでエラーが出ているのか見る':
+        answer9A.classList.remove('hidden');
+        currentAnswer = answer9A;
+        nextQuestion = question10;
+        break;
+      
+      case '神社にお参りに行く':
+        answer9B.classList.remove('hidden');
+        currentAnswer = answer9B;
+        nextQuestion = question10;
+        break;
+      
+      case '集中力をあげるツボを押す':
+        answer10A.classList.remove('hidden');
+        currentAnswer = answer10A;
+        nextQuestion = question11;
+        break;
+      
+      case '開発仲間とオンラインもくもく会を開催':
+        answer10B.classList.remove('hidden');
+        currentAnswer = answer10B;
+        nextQuestion = question11;
+        break;
+      
+      case '英語圏の友達を作りに行く':
+        answer11A.classList.remove('hidden');
+        currentAnswer = answer11A;
+        nextQuestion = question12;
+        break;
+      
+      case 'OK！Google翻訳大先生！':
+        answer11B.classList.remove('hidden');
+        currentAnswer = answer11B;
+        nextQuestion = question12;
+        break;
+      
+      case '名詞を使う、配列など複数の値は複数形にすること':
+        answer12A.classList.remove('hidden');
+        currentAnswer = answer12A;
+        nextQuestion = question13;
+        break;
+      
+      case '好きな猫の毛柄からランダムに':
+        answer12B.classList.remove('hidden');
+        currentAnswer = answer12B;
+        nextQuestion = question13;
+        break;
+      
+      // case 'グラフ描画職人を雇う':
+      //   answer13A.classList.remove('hidden');
+      //   currentAnswer = answer13A;
+      //   currentQuestion = question14;
+      //   preQuestion = question13;
+      //   break;
+      
+      // case 'Google Chartsを使う':
+      //   answer13B.classList.remove('hidden');
+      //   currentAnswer = answer13B;
+      //   currentQuestion = question14;
+      //   preQuestion = question13;
+      //   break;
+
+      // 臨時エンドルート
+      case 'グラフ描画職人を雇う':
+        answer13A.classList.remove('hidden');
+        currentAnswer = answer13A;
+        nextQuestion = epilogue;
+        break;
+
+      case 'Google Chartsを使う':
+        answer13B.classList.remove('hidden');
+        currentAnswer = answer13B;
+        nextQuestion = epilogue;
+        break;
+
+      
     }
   });
 });
 
-// 戻る
-paging.children[0].addEventListener('click', () => {
-  currentAnswer.classList.add('hidden');
-  preQuestion.classList.remove('hidden');
-  paging.classList.add('hidden');
-
-  currentQuestion = preQuestion;
-});
-
-// やり直し
-retryBtn.forEach(btn => {
-  btn.addEventListener('click', () => {
-    currentAnswer.classList.add('hidden');
-    preQuestion.classList.remove('hidden');
-
-    currentQuestion = preQuestion;
-  });
-});
-
 // 次へ
-paging.children[1].addEventListener('click', () => {
+nextBtn.addEventListener('click', () => {
   currentAnswer.classList.add('hidden');
-  currentQuestion.classList.remove('hidden');
+  nextQuestion.classList.remove('hidden');
 
-  paging.classList.add('hidden');
+  next.classList.add('hidden');
 });
 
 // TOPへ戻る
@@ -152,5 +291,8 @@ home.addEventListener('click', () => {
   window.location.reload();
 });
 
+finishBtn.addEventListener('click', () => {
+  window.location.reload();
+});
 
 
