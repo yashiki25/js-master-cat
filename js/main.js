@@ -1,13 +1,23 @@
 'use strict';
 
+// const data = ['Mac', 'Windows', 'HTML/CSS', 'FX', 'Web学習サイト', '書籍', '配列、条件分岐、オブジェクト指向…プログラミング知識をひたすら習得', '簡単なアプリや機能を作ってみる', 'プログラミングスクールに通う', '独学', '256times', 'その他のスクール', '粉もの大好き', 'JavaScriptは日々進化している', '検索のTOPに出た方を信じる', 'MDNや複数のサイトを確認して最新の情報を収集する', 'デベロッパーツールのConsoleでどこでエラーが出ているのか見る', '神社にお参りに行く', '集中力をあげるツボを押す', '開発仲間とオンラインもくもく会を開催', '英語圏の友達を作りに行く', 'OK！Google翻訳大先生！', '名詞を使う、配列など複数の値は複数形にすること', '好きな猫の毛柄からランダムに', 'グラフ描画職人を雇う', 'Google Chartsを使う'];
+
 let nextQuestion = '';   // 現在のの設問
 let currentAnswer = '';     // 今表示している回答
 
 const startBtn = document.getElementById('start');
 const retryBtn = document.querySelectorAll('.retry');
+const nextBtn = document.getElementById('next');
+const finishBtn = document.getElementById('finish');
+
+const home = document.querySelector('.home'); // TOPへ戻る
+const choices = document.querySelectorAll('.choices li'); // 選択肢
+const questionNo = document.querySelector('.question-no'); // 問題番号
 
 const sections = document.querySelectorAll('section');
 const descriptionSection = document.querySelector('.content-description');
+
+const header = document.querySelector('header');
 
 // MacかWindowsか
 const question1 = document.querySelector('.question1');
@@ -77,17 +87,11 @@ const answer13B = document.querySelector('.answer13-b');
 // エピローグ
 const epilogue = document.querySelector('.epilogue');
 
-const home = document.querySelector('.home');
-// const nextBtn = document.querySelector('.next');
-const nextBtn = document.getElementById('next');
-const finishBtn = document.getElementById('finish');
-
-const choices = document.querySelectorAll('.choices li');
-
 // スタートボタン
 startBtn.addEventListener('click', () => {
   descriptionSection.classList.add('hidden');
   question1.classList.remove('hidden');
+  questionNo.classList.remove('hidden');
   home.classList.remove('hidden');
 
   nextQuestion = question1;
@@ -96,9 +100,8 @@ startBtn.addEventListener('click', () => {
 // 選択肢クリック
 choices.forEach(choice => {
   choice.addEventListener('click', () => {
-    // 問題を非表示
+
     nextQuestion.classList.add('hidden');
-    // 次へ・戻る表示
     next.classList.remove('hidden');
 
     switch (choice.textContent) {
@@ -174,7 +177,7 @@ choices.forEach(choice => {
         nextQuestion = question7;
         break;
       
-      case '粉もの、大好き':
+      case '粉もの大好き':
         answer7A.classList.remove('hidden');
         currentAnswer = answer7A;
         nextQuestion = question8;
@@ -282,8 +285,9 @@ choices.forEach(choice => {
 nextBtn.addEventListener('click', () => {
   currentAnswer.classList.add('hidden');
   nextQuestion.classList.remove('hidden');
-
   next.classList.add('hidden');
+
+  questionNo.children[1].textContent = (questionNo.children[1].textContent * 1) + 1;
 });
 
 // TOPへ戻る
@@ -292,6 +296,10 @@ home.addEventListener('click', () => {
 });
 
 finishBtn.addEventListener('click', () => {
+  window.location.reload();
+});
+
+header.addEventListener('click', () => {
   window.location.reload();
 });
 

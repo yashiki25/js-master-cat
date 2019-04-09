@@ -4,7 +4,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Ubuntu', "M PLUS Rounded 1c", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Arial, Osaka, Sans-Serif;
-  /* background: #eee; */
+  background: #eee;
   color: #2d4059;
 }
 
@@ -22,6 +22,7 @@ header {
   background: #364f6b;
   /* background: #3fc1c9; */
   color: #fff;
+  cursor: pointer;
 }
 
 header > h1 {
@@ -36,8 +37,8 @@ header > h1 {
 }
 
 header > h1 > img {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   vertical-align: middle;
   margin: 0 10px;
 }
@@ -48,13 +49,19 @@ header p {
   font-size: 17px;
 }
 
+.img-box {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  background-color: #252a34;
+}
+
 .cat-img {
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
   width: 80%;
-  border-radius: 4px;
-  border: double 5px #aaa;
+  padding: 10px 0;
 }
 
 /* RPG風 */
@@ -190,10 +197,6 @@ footer ul li a:hover {
   cursor: pointer;
 }
 
-#next.hidden {
-  display: none;
-}
-
 #finish {
   display: block;
   margin: 0 auto;
@@ -277,8 +280,9 @@ footer ul li a:hover {
   width: 30%;
 }
 
-.answer7-a a {
-  color: #2c8a8f;
+.answer7-a a,
+.answer8-a a {
+  color: #3fc1c9;
 }
 
 .answer6-b li > p {
@@ -286,7 +290,26 @@ footer ul li a:hover {
   margin-top: 5px;
 }
 
+.question-no {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 4px 0;
+  /* border: 5px solid #e3fdfd; */
+  border-radius: 4px;
+  background: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .hidden {
+  display: none;
+}
+
+#next.hidden,
+.question-no.hidden {
   display: none;
 }
 
@@ -322,12 +345,6 @@ footer ul li a:hover {
     padding: 10px 20px;
     font-size: 20px;
   }
-
-  .paging li {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
 }
 
 @media (min-width: 912px) {
@@ -343,8 +360,13 @@ footer ul li a:hover {
     font-size: 20px;
   }
 
+  .img-box {
+    width: 60%;
+  }
+
   .cat-img {
-    width: 40%;
+    width: 70%;
+    padding: 15px 0;
   }
 
   .textboard {
@@ -356,11 +378,6 @@ footer ul li a:hover {
   }
 
   .choices li {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  .paging li {
     padding: 10px 20px;
     font-size: 20px;
   }

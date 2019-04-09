@@ -17,28 +17,34 @@
   <body>
     <header>
       <h1>ねこちゃん<img src="img/cat_white.png">クエスト</h1>
-      <p>~ Webアプリ作るまで冒険譚 ~</p>
+      <p>~ 0から1へのプログラミング冒険譚 ~</p>
     </header>
     <main>
     <!-- サイト説明 -->
     <section class="content-description">
-      <img src="img/top.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/top.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>この<strong>ねこ</strong>には『夢』がある！</p>
         <p class="last-text">自分で考えたWebアプリをこの手で作り上げ、この広いインターネットの世界に羽ばたかせたい！</p>
       </div>
       
       <div class="description">
-        <p>このコンテンツは、制作者・<strong>やしき</strong>の体験を元に</p>
+        <p>このコンテンツは、制作者・<strong>やしき</strong>のつまずき経験を元に</p>
         <p>二択の選択式で<strong>ねこ</strong>がWebアプリ制作に挑む物語(のようなもの)です</p>
-        <p><strong>ねこ</strong>とともに、いざアプリ開発ワールドへ！</p>
+        <p>ねことともに、いざプログラミングワールドへ！</p>
       </div>
       <button id="start">START!</button>
     </section>
+
+    <p class="question-no hidden"><i class="fas fa-laptop"></i> クエスト：<span>1</span> / 13</p>
     
     <!-- 問題1 -->
     <section class="question1 hidden">
-      <img src="img/q1.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q1.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>さっそく、ねこはパソコンを買いにヨド●シへ</p>
         <p>プログラミングの勉強するならMacとWindowsどっちがいいんだろう？</p>
@@ -64,7 +70,9 @@
 
     <!-- 問題2 -->
     <section class="question2 hidden">
-      <img src="img/q2.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q2.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>ねこはパソコンを手に入れた！</p>
         <p>で、何から勉強しよう？</p>
@@ -78,6 +86,7 @@
     <section class="answer2-a hidden">
       <div class="answer">
         <p>自分でWebアプリを作るなら、まずは画面を作る術を身につけよう！</p>
+        <p>自己紹介やポートフォリオサイトなどを作ってみるのはいかが？</p>
         <p>それからJavaScriptで動きをつけていく流れが◎</p>
       </div>
     </section>
@@ -90,7 +99,9 @@
 
     <!-- 問題3 -->
     <section class="question3 hidden">
-      <img src="img/q3.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q3.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>いざプログラミング！教材はどうしよう？</p>
       </div>
@@ -117,7 +128,9 @@
 
     <!-- 問題4 -->
     <section class="question4 hidden">
-      <img src="img/q4.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q4.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>プログラミング、チョットワカッタ！ねこは次のステップに進みたい</p>
         <p>基本の次はどうやって勉強していこうかな</p>
@@ -146,11 +159,12 @@
 
     <!-- 問題5 -->
     <section class="question5 hidden">
-      <img src="img/q5.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q5.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>プログラミングがちょっとずつ楽しくなってきたねこ</p>
-        <p>ここでオリジナルWebアプリを作るための計画を立てることに</p>
-        <p>どういう風に作っていこうかな</p>
+        <p>プログラミングがちょっとずつ楽しくなってきたねこは、ついにオリジナルWebアプリを作るための計画を立てることに。</p>
+        <p>どういう風に作っていこうかな〜</p>
       </div>
       <ul class="choices">
         <li>プログラミングスクールに通う</li>
@@ -171,8 +185,7 @@
     
     <section class="answer5-b hidden">
       <div class="answer">
-        <p><strong>くじけポイント</strong></p>
-        <p>全くの模写ではなく、自分なりに勉強した機能や処理を組み合わせて「オリジナルアプリ」を作るという点が独学の壁だと感じております（256times参加前、アプリを作ろうとしてこの壁により挫折済み）</p>
+        <p>模写ではなく、自分なりに勉強した機能や処理を組み合わせて「オリジナルアプリ」を作るという点が独学の壁（256times参加前、アプリを作ろうとしてこの壁により挫折済み）</p>
         <p>SNSや勉強会を通じて仲間をゲットし、挫けそうな時は共に壁を乗り越えよう…！</p>
         <p><strong>くじけポイント</strong></p>
         <ul>
@@ -186,12 +199,13 @@
 
     <!-- 問題6 -->
     <section class="question6 hidden">
-      <img src="img/q6.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q6.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>挫けてしまわないようにサポートを受けながらWebアプリを作っていきたいなぁ</p>
-        <p>色んなスクールがあるけど…どんなところがいいんだろう…？</p>
-        <p>おお？！ドットインストールもプログラミングスクールを始めるみたい！</p>
-        <p>な、何がどう他のスクールと違うんだ…！？？</p>
+        <p>挫けてしまわないように期日を決めてサポート受けながらWebアプリを作っていきたいなぁ</p>
+        <p>色んなスクールがあるけど…どんなところがいいんだろ…お、ドットインストールのプログラミングスクールもあるみたい。</p>
+        <p>うーん、何がどう他のスクールと違うんだ…？？</p>
       </div>
       <ul class="choices">
         <li>256times</li>
@@ -211,16 +225,16 @@
           <li>HTML、CSS、JavaScript、さらにUIデザインに関する基礎〜応用を徹底習得</li>
           <li>プログラミング学習サイトの運営メンバーから最先端のコードレビューがバリバリ受けられる</li>
           <li>テクノロジーコミュニティへの仲間入りを目指すスクールなので、参加者との交流が前提＝一気に仲間×9が増える！</li>
-          <li>自分でコードを書くだけじゃなく、参加者のコードが見れて触れられる</li>
+          <li>自分でコードを書くだけじゃなく、参加者のコードを見て触れられる</li>
           <li>自分のアプリ制作だけじゃなく、他の参加者のアプリや課題を通して短期間でいろんな知識をギュッと吸収</li>
           <li>taguchiさんとメンタリングし放題（現時点）</li>
         </ul>
-        <p>こんな人にはちょっと向いてないかもポイント</p>
+        <p><strong>こんな人にはちょっと向いてないかもポイント</strong></p>
         <ul>
           <li>黙々と自分のアプリ制作だけしたい</li>
           <li>〆切に終われずのびのびと開発したい</li>
           <li>スクールの目標はテクノロジーコミュニティの仲間入りのため、転職支援はなし</li>
-          <li>フレームワークやPHP,Rubyでアプリが作りたい</li>
+          <li>フレームワークやPHP,Rubyでアプリが作りたい（256はフロントオンリー）</li>
           <li>お金を積んでの入校（選考からスパルタ）</li>
         </ul>
       </div>
@@ -247,11 +261,13 @@
     <section class="question7 hidden">
       <div class="textboard">
         <p>ねこは256timesに入校することを決意</p>
-        <p>選考スタートの元旦から二週間…餅の力を借りて物理的に一回り成長しながらスパルタ選考を通過！</p>
+        <p>選考スタートの元旦から二週間…餅の力を借りて物理的に一回り成長しながらスパルタ選考を通過</p>
+        <p>いざ、スパルタスクール開校！</p>
       </div>
-      <img src="img/q7.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q7.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>スパルタスクール、開講！</p>
         <p>ねこがどれくらいのJavaScriptスキル保持者なのか確認するため、オンラインメンタリングをしてもらうことに。いざ画面共有でライブコーディング…</p>
         <p>間違えながら、調べながら、なんとか書けた！</p>
         <p>すると、taguchiさんがねこが書いていたのを見てこう一言</p>
@@ -267,14 +283,15 @@
 
     <section class="answer7-a hidden">
       <div class="answer">
-        <p>なるほど！！！<a href="https://amaru.me/trivia/okonomiyaki-hirosimayaki-modanyaki/" target="_blank">「お好み焼き」「モダン焼き」「広島風お好み焼き」の違い</a></p>
+        <p>なるほど！！！</p>
+        <p><a href="https://amaru.me/trivia/okonomiyaki-hirosimayaki-modanyaki/" target="_blank">「お好み焼き」「モダン焼き」「広島風お好み焼き」の違い</a></p>
       </div>
     </section>
     
     <section class="answer7-b hidden">
       <div class="answer">
-        <p>技術が日々進化しているように、JavaScriptの言語仕様も進化し続けています</p>
-        <p>その仕様は<strong>ECMAScript</strong>と呼ばれ、Ecma Internationalという団体によって標準化されていて、「こんなJavaScriptだったらいいな！」がどんどん実現されているのです</p>
+        <p>技術が日々進化しているように、JavaScriptの言語仕様も進化中。</p>
+        <p>その仕様は<strong>ECMAScript</strong>と呼ばれ、Ecma Internationalという団体によって「こんなJavaScriptだったらいいな！」がどんどん実現されているのです。</p>
         <p>よって、varより便利なconstが生まれました！</p>
         <p>技術者となり、アプリを作っていくうえで<strong>モダンである</strong>ことには敏感でいたいものです</p>
       </div>
@@ -283,9 +300,11 @@
 
     <!-- 問題8 -->
     <section class="question8 hidden">
-      <img src="img/q8.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q8.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>「常にモダンたれ」を心に刻んだねこはJavaScript50本ノックを受けていた</p>
+        <p>「常にモダンたれ」を心に刻んだねこはJavaScript50本ノックを受けていた。</p>
         <p>テキストの書き換え…なるほどtextContentプロパティ…あれ？別のサイトではinnerHTMLプロパティを使ってる？え！どっち？！</p>
       </div>
       <ul class="choices">
@@ -296,29 +315,32 @@
     
     <section class="answer8-a hidden">
       <div class="answer">
-        <p>現在、innerHTMLプロパティの使用は非推奨です</p>
-        <p>どちらで処理を書いても結果は同じになるかもしれないけれど、JavaScriptやその他の技術の進化、またセキュリティの観点から昔は使っていたけれど現在は使わない方がいい、というような書き方が結構あります</p>
+        <p>現在、innerHTMLプロパティの使用は非推奨</p>
+        <p>どちらで処理を書いても結果は同じになるかもしれないけれど、JavaScriptやその他の技術の進化、またセキュリティの観点から昔は使っていたけれど現在は使わない方がいい、というような書き方が結構あります。</p>
         <p>なのでインターネット上には新旧の情報がごちゃまぜに…</p>
-        <p>直近の記事だからといっても信頼出来ないこともしばしば</p>
-        <p>そんなときはまずWebアプリ開発者必見の<a href="https://developer.mozilla.org/ja/" target="_blank">MDN</a></p>
+        <p>直近の記事だからといっても信頼出来ないこともしばしば。</p>
+        <p>そんなときはまずWebアプリ開発者必見の<a href="https://developer.mozilla.org/ja/" target="_blank">MDN</a>！！！</p>
         <p>気になる記法があったらここで調べる癖をつけてみよう！</p>
       </div>
     </section>
     
     <section class="answer8-b hidden">
       <div class="answer">
-        <p>インターネットは簡単に情報収集が出来てとても便利、けれどのその情報が信頼できるものかは保証されていません</p>
-        <p>記事が新しいからといって正しいものかもわからない</p>
+        <p>インターネットは簡単に情報収集が出来てとても便利、けれどのその情報が信頼できるものかは保証されておりません。</p>
+        <p>記事が新しいからといって正しいものかもわからない…！</p>
         <p>できるだけ公式やそれに近しいドキュメントを参考にしたり、複数のサイトを横断して情報が正しいか新しいものかを見て回ろう！</p>
-        <p>ただ、最初のうちは情報の収集と選択も、まず技術的な文章を読むのからくじけポイント(T-T)</p>
-        <p>256timesでは非推奨だったりもっとモダンに書ける処理に対してバンバン指摘してもらえるから、間違えて覚えてしまう心配なし！たくさん調べて書いて覚えていこう！</p>
+        <p>ただ最初のうちは、情報の収集とその選択も、なによりまず技術的な文章を読むことからくじけポイント(T_T)</p>
+        <p>独学でつまづいてしまったら、初心者向け勉強会やSNSを活用すると◎</p>
+        <p>（256timesでは非推奨だったり、もっとモダンに書ける処理に対してバンバン指摘してもらえるから、間違えて覚えてしまう心配なし）</p>
         <p></p>
-      </div>
+      </div>Ω
     </section>
 
     <!-- 問題9 -->
     <section class="question9 hidden">
-      <img src="img/q9.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q9.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>JavaScriptをゴリゴリ書いていたある日、書いた処理が思ったように動かない</p>
         <p>困ったねこは…</p>
@@ -331,7 +353,7 @@
     
     <section class="answer9-a hidden">
       <div class="answer">
-        <p>queryselectors…？あ、sが小文字になってら</p>
+        <p>queryselectorsがnot defined…？あ、sが小文字になってら</p>
         <p>（しばらく悩んで解決しないエラーはだいたいスペルミス説）</p>
       </div>
     </section>
@@ -345,7 +367,9 @@
 
     <!-- 問題10 -->
     <section class="question10 hidden">
-      <img src="img/q10.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q10.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>うーん、コード書いてたはずが気がつくとTwi●terのタイムラインを更新し続ける症状が…</p>
         <p>でも締め切りも近いし集中して課題に取り組みたい、どうしよう〜</p>
@@ -364,8 +388,8 @@
     
     <section class="answer10-b hidden">
       <div class="answer">
-        <p>256timesでは集中して作業したい時などにオンラインもくもく会が開催されておりました</p>
-        <p>オンラインもくもくは、作業中は特に会話せずひらすら自分の作業をしてるだけなので端から見たら一人で作業してるのと同じでは？と思うかもしれませんが、同じ時に誰かと作業してるっていうことがなんだがすごく嬉しくて楽しいのです。</p>
+        <p>256timesでは集中して作業したい時などにオンラインもくもく会が開催されておりました。</p>
+        <p>同じ時間に、一緒に作業に打ち込んでいることがなんだか嬉しい</p>
         <p>宣言したからやらなきゃ！という緊張感も生まれて集中力もUP！</p>
         <p><strong>お手軽オンラインもくもく開催方法</strong></p>
         <ul>
@@ -381,7 +405,9 @@
 
     <!-- 問題11 -->
     <section class="question11 hidden">
-      <img src="img/q11.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q11.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>おすすめのサイトを教えてもらったけど英語だ…ぐぬぬ</p>
       </div>
@@ -405,9 +431,11 @@
 
     <!-- 問題12 -->
     <section class="question12 hidden">
-      <img src="img/q12.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q12.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>変数名、いっっっも悩むなあ</p>
+        <p>変数名、いっっっも悩むなあ。</p>
         <p>どういう付け方したらいいんだろう</p>
       </div>
       <ul class="choices">
@@ -418,7 +446,7 @@
     
     <section class="answer12-a hidden">
       <div class="answer">
-        <p>変数名を考える時もGoogle翻訳大先生が大活躍なされます</p>
+        <p>変数名を考える時もGoogle翻訳大先生が大活躍なされます。</p>
         <p>複数の値はitemsやcatsなど複数形にすると、foEach文で中身を取り出す時に単数にできてわかりやすい！</p>
       </div>
     </section>
@@ -431,9 +459,11 @@
 
     <!-- 問題13 -->
     <section class="question13 hidden">
-      <img src="img/q13.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q13.png" class="cat-img">
+      </div>
       <div class="textboard">
-        <p>ねこは家計簿もどきアプリを作っていた</p>
+        <p>ねこは家計簿もどきアプリを作っていた。</p>
         <p>登録したデータを集計して円グラフにしたいなあ、どうすりゃいいんだ？</p>
       </div>
       <ul class="choices">
@@ -451,14 +481,16 @@
     <section class="answer13-b hidden">
       <div class="answer">
         <p>Google ChartsはGoogleが用意してくれた簡単にグラフを書くことができるライブラリ</p>
-        <p>自分で一から処理を書かなくても、ライブラリの「グラフを描画するためのメソッド」を使えば簡単にグラフが描けるのです</p>
-        <p>スピーディに開発するにはこういう便利なものを知って活用していくことも大切です！</p>
+        <p>自分で一から処理を書かなくても、ライブラリの「グラフを描画するためのメソッド」を使えば簡単にグラフが描けるのです。</p>
+        <p>スピーディに開発するにはこういう便利なものを知って活用していくことも大切！</p>
       </div>
     </section>
 
     <!-- 問題14 -->
     <section class="question14 hidden">
-      <img src="img/q14.png" class="cat-img">
+      <div class="img-box">
+        <img src="img/q14.png" class="cat-img">
+      </div>
       <div class="textboard">
         <p>スニーカー販売サイトのUIデザイン課題をするねこ</p>
         <p>怒涛の鬼レビュー、</p>
