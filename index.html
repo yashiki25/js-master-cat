@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="ねこと一緒にプログラミングのつまずきを乗り越えよう！">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ねこちゃんクエスト</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -41,7 +42,7 @@
     <p class="question-no hidden"><i class="fas fa-laptop"></i> クエスト：<span>1</span> / 13</p>
     
     <!-- 問題1 -->
-    <section class="question1 hidden">
+    <section data-no="1" class="question1 hidden">
       <div class="img-box">
         <img src="img/q1.png" class="cat-img">
       </div>
@@ -69,7 +70,7 @@
     </section>
 
     <!-- 問題2 -->
-    <section class="question2 hidden">
+    <section data-no="2" class="question2 hidden">
       <div class="img-box">
         <img src="img/q2.png" class="cat-img">
       </div>
@@ -98,7 +99,7 @@
     </section>
 
     <!-- 問題3 -->
-    <section class="question3 hidden">
+    <section data-no="3" class="question3 hidden">
       <div class="img-box">
         <img src="img/q3.png" class="cat-img">
       </div>
@@ -127,7 +128,7 @@
     </section>
 
     <!-- 問題4 -->
-    <section class="question4 hidden">
+    <section data-no="4" class="question4 hidden">
       <div class="img-box">
         <img src="img/q4.png" class="cat-img">
       </div>
@@ -143,7 +144,7 @@
     
     <section class="answer4-a hidden">
       <div class="answer">
-        <p><strong>くじけポイント</strong></p>
+        <p><strong>つまずきポイント</strong></p>
         <p>知識習得は必要だけれども、今の段階で片っ端から全部学んで覚える必要はなし（大抵のことは寝たら忘却の彼方…）</p>
         <p>プログラミング知識を片っ端から理論的に勉強しようとして挫ける前に、手を動かしてプログラムの動きと作る楽しさを体験した方が吉。</p>
         <p>文字を眺めて覚えるより、コードを書いてつまずきながら勉強して覚えた方が身につきやすい！</p>
@@ -159,7 +160,7 @@
     </section>
 
     <!-- 問題5 -->
-    <section class="question5 hidden">
+    <section data-no="5" class="question5 hidden">
       <div class="img-box">
         <img src="img/q5.png" class="cat-img">
       </div>
@@ -188,7 +189,7 @@
       <div class="answer">
         <p>模写ではなく、自分なりに勉強した機能や処理を組み合わせて「オリジナルアプリ」を作るというのが独学の壁（256times参加前、アプリを作ろうとしてこの壁により挫折済み）</p>
         <p>SNSや勉強会を通じて仲間をゲットし、挫けそうな時は共に壁を乗り越えよう…！</p>
-        <p><strong>くじけポイント</strong></p>
+        <p><strong>つまずきポイント</strong></p>
         <ul>
           <li>基礎はわかった。作りたいアプリはある。でも作りたいアプリがそれが実現可能なのか、何から手をつければいいのかわからない…</li>
           <li>自分のやっていること、書いているコードは正しいのか？という謎のプレッシャーと不安</li>
@@ -199,7 +200,7 @@
     </section>
 
     <!-- 問題6 -->
-    <section class="question6 hidden">
+    <section data-no="6" class="question6 hidden">
       <div class="img-box">
         <img src="img/q6.png" class="cat-img">
       </div>
@@ -259,7 +260,7 @@
     </section>
 
     <!-- 問題7 -->
-    <section class="question7 hidden">
+    <section data-no="7" class="question7 hidden">
       <div class="textboard">
         <p>ねこは256timesに入校することを決意</p>
         <p>選考スタートの元旦から二週間…餅の力を借りて物理的に一回り成長しながらスパルタ選考を通過</p>
@@ -300,7 +301,7 @@
 
 
     <!-- 問題8 -->
-    <section class="question8 hidden">
+    <section data-no="8" class="question8 hidden">
       <div class="img-box">
         <img src="img/q8.png" class="cat-img">
       </div>
@@ -327,18 +328,16 @@
     
     <section class="answer8-b hidden">
       <div class="answer">
-        <p>インターネットは簡単に情報収集が出来てとても便利、けれどのその情報が信頼できるものかは保証されておりません。</p>
-        <p>記事が新しいからといって正しいものかもわからない…！</p>
-        <p>できるだけ公式やそれに近しいドキュメントを参考にしたり、複数のサイトを横断して情報が正しいか新しいものかを見て回ろう！</p>
-        <p>ただ最初のうちは、情報の収集とその選択も、なによりまず技術的な文章を読むことからくじけポイント(T_T)</p>
-        <p>独学でつまづいてしまったら、初心者向け勉強会やSNSを活用すると◎</p>
-        <p>（256timesでは非推奨だったり、もっとモダンに書ける処理に対してバンバン指摘してもらえるから、間違えて覚えてしまう心配なし）</p>
-        <p></p>
-      </div>Ω
+        <p>インターネットは簡単に情報収集が出来てとても便利、けれどもその情報が信頼できるものかは保証されておりません。</p>
+        <p>記事が新しいからといって正しいものかもわからない…</p>
+        <p>できるだけ公式やそれに近しいドキュメントを参考にしたり、複数のサイトを横断して情報を選別していこう！</p>
+        <p>ただ最初のうちは、情報の収集とその選択も、なによりまず技術的な文章を読むことからつまずきポイント(T_T)</p>
+        <p>独学でつまずいてしまったら、初心者向け勉強会やSNSを活用すると◎</p>
+      </div>
     </section>
 
     <!-- 問題9 -->
-    <section class="question9 hidden">
+    <section data-no="9" class="question9 hidden">
       <div class="img-box">
         <img src="img/q9.png" class="cat-img">
       </div>
@@ -367,13 +366,13 @@
     </section>
 
     <!-- 問題10 -->
-    <section class="question10 hidden">
+    <section data-no="10" class="question10 hidden">
       <div class="img-box">
         <img src="img/q10.png" class="cat-img">
       </div>
       <div class="textboard">
         <p>うーん、コード書いてたはずが気がつくとTwi●terのタイムラインを更新し続ける症状が…</p>
-        <p>でも締め切りも近いし集中して課題に取り組みたい、どうしよう〜</p>
+        <p>でも期日も近いし集中して開発に取り組みたい、どうしよう〜</p>
       </div>
       <ul class="choices">
         <li>集中力をあげるツボを押す</li>
@@ -405,7 +404,7 @@
     </section>
 
     <!-- 問題11 -->
-    <section class="question11 hidden">
+    <section data-no="11" class="question11 hidden">
       <div class="img-box">
         <img src="img/q11.png" class="cat-img">
       </div>
@@ -431,7 +430,7 @@
     </section>
 
     <!-- 問題12 -->
-    <section class="question12 hidden">
+    <section data-no="12" class="question12 hidden">
       <div class="img-box">
         <img src="img/q12.png" class="cat-img">
       </div>
@@ -448,7 +447,7 @@
     <section class="answer12-a hidden">
       <div class="answer">
         <p>変数名を考える時もGoogle翻訳大先生が大活躍なされます。</p>
-        <p>複数の値はitemsやcatsなど複数形にすると、foEach文で中身を取り出す時に単数にできてわかりやすい！</p>
+        <p>複数の値はitemsやcatsなど複数形にすると、foEach文で中身を取り出す時にitem,catという風に単数にできてわかりやすい！</p>
       </div>
     </section>
     
@@ -459,7 +458,7 @@
     </section>
 
     <!-- 問題13 -->
-    <section class="question13 hidden">
+    <section data-no="13" class="question13 hidden">
       <div class="img-box">
         <img src="img/q13.png" class="cat-img">
       </div>
@@ -488,7 +487,7 @@
     </section>
 
     <!-- 問題14 -->
-    <section class="question14 hidden">
+    <section data-no="14" class="question14 hidden">
       <div class="img-box">
         <img src="img/q14.png" class="cat-img">
       </div>
@@ -534,6 +533,7 @@
     </main>
 
     <footer>
+      <button id="back" class="hidden">戻る</button>
       <p class="home hidden"><i class="fas fa-home"></i> TOPへ戻る</p>
       <hr>
       <ul>

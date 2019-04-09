@@ -46,7 +46,7 @@ header > h1 > img {
 header p {
   text-align: center;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 strong {
@@ -54,9 +54,9 @@ strong {
 }
 
 .img-box {
-  width: 86%;
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border-radius: 2px;
   background-color: #252a34;
 }

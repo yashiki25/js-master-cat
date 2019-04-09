@@ -2,13 +2,15 @@
 
 // const data = ['Mac', 'Windows', 'HTML/CSS', 'FX', 'Web学習サイト', '書籍', '配列、条件分岐、オブジェクト指向…プログラミング知識をひたすら習得', '簡単なアプリや機能を作ってみる', 'プログラミングスクールに通う', '独学', '256times', 'その他のスクール', '粉もの大好き', 'JavaScriptは日々進化している', '検索のTOPに出た方を信じる', 'MDNや複数のサイトを確認して最新の情報を収集する', 'デベロッパーツールのConsoleでどこでエラーが出ているのか見る', '神社にお参りに行く', '集中力をあげるツボを押す', '開発仲間とオンラインもくもく会を開催', '英語圏の友達を作りに行く', 'OK！Google翻訳大先生！', '名詞を使う、配列など複数の値は複数形にすること', '好きな猫の毛柄からランダムに', 'グラフ描画職人を雇う', 'Google Chartsを使う'];
 
-let nextQuestion = '';   // 現在のの設問
-let currentAnswer = '';     // 今表示している回答
+let nextQuestion = '';   // 次の設問
+let currentAnswer = '';  // 今表示している回答
+const preSection = [];    // 前の設問
 
 const startBtn = document.getElementById('start');
 const retryBtn = document.querySelectorAll('.retry');
 const nextBtn = document.getElementById('next');
 const finishBtn = document.getElementById('finish');
+const backBtn = document.getElementById('back');
 
 const home = document.querySelector('.home'); // TOPへ戻る
 const choices = document.querySelectorAll('.choices li'); // 選択肢
@@ -95,14 +97,20 @@ startBtn.addEventListener('click', () => {
   home.classList.remove('hidden');
 
   nextQuestion = question1;
+  preSection.push({section:question1, isQestion: true});
 });
 
 // 選択肢クリック
 choices.forEach(choice => {
   choice.addEventListener('click', () => {
 
+    // 戻るボタン表示
+    if (preSection.length > 0) {
+      backBtn.classList.remove('hidden');
+    }
+
     nextQuestion.classList.add('hidden');
-    next.classList.remove('hidden');
+    nextBtn.classList.remove('hidden');
 
     switch (choice.textContent) {
       case 'Mac':
@@ -121,133 +129,136 @@ choices.forEach(choice => {
         answer2A.classList.remove('hidden');
         currentAnswer = answer2A;
         nextQuestion = question3;
+        preSection.push({ section: question2, isQestion: true });
         break;
       
       case 'FX':
         answer2B.classList.remove('hidden');
         currentAnswer = answer2B;
         nextQuestion = question3;
+        preSection.push({ section: question2, isQestion: true });
         break;
       
       case 'Web学習サイト':
         answer3A.classList.remove('hidden');
         currentAnswer = answer3A;
         nextQuestion = question4;
+        preSection.push({ section: question3, isQestion: true });
         break;
       
       case '書籍':
         answer3B.classList.remove('hidden');
         currentAnswer = answer3B;
         nextQuestion = question4;
-        break;
+        preSection.push({ section: question3, isQestion: true });        break;
       
       case '配列、条件分岐、オブジェクト指向…プログラミング知識をひたすら習得':
         answer4A.classList.remove('hidden');
         currentAnswer = answer4A;
         nextQuestion = question5;
-        break;
+        preSection.push({ section: question4, isQestion: true });        break;
       
       case '簡単なアプリや機能を作ってみる':
         answer4B.classList.remove('hidden');
         currentAnswer = answer4B;
         nextQuestion = question5;
-        break;
+        preSection.push({ section: question4, isQestion: true });        break;
       
       case 'プログラミングスクールに通う':
         answer5A.classList.remove('hidden');
         currentAnswer = answer5A;
         nextQuestion = question6;
-        break;
+        preSection.push({ section: question5, isQestion: true });        break;
       
       case '独学':
         answer5B.classList.remove('hidden');
         currentAnswer = answer5B;
         nextQuestion = question6;
-        break;
+        preSection.push({ section: question5, isQestion: true });        break;
       
       case '256times':
         answer6A.classList.remove('hidden');
         currentAnswer = answer6A;
         nextQuestion = question7;
-        break;
+        preSection.push({ section: question6, isQestion: true });        break;
       
       case 'その他のスクール':
         answer6B.classList.remove('hidden');
         currentAnswer = answer6B;
         nextQuestion = question7;
-        break;
+        preSection.push({ section: question6, isQestion: true });        break;
       
       case '粉もの大好き':
         answer7A.classList.remove('hidden');
         currentAnswer = answer7A;
         nextQuestion = question8;
-        break;
+        preSection.push({ section: question7, isQestion: true });        break;
       
       case 'JavaScriptは日々進化している':
         answer7B.classList.remove('hidden');
         currentAnswer = answer7B;
         nextQuestion = question8;
-        break;
+        preSection.push({ section: question7, isQestion: true });        break;
       
       case '検索のTOPに出た方を信じる':
         answer8A.classList.remove('hidden');
         currentAnswer = answer8A;
         nextQuestion = question9;
-        break;
+        preSection.push({ section: question8, isQestion: true });        break;
       
       case 'MDNや複数のサイトを確認して最新の情報を収集する':
         answer8B.classList.remove('hidden');
         currentAnswer = answer8B;
         nextQuestion = question9;
-        break;
+        preSection.push({ section: question8, isQestion: true });        break;
       
       case 'デベロッパーツールのConsoleでどこでエラーが出ているのか見る':
         answer9A.classList.remove('hidden');
         currentAnswer = answer9A;
         nextQuestion = question10;
-        break;
+        preSection.push({ section: question9, isQestion: true });        break;
       
       case '神社にお参りに行く':
         answer9B.classList.remove('hidden');
         currentAnswer = answer9B;
         nextQuestion = question10;
-        break;
+        preSection.push({ section: question9, isQestion: true });        break;
       
       case '集中力をあげるツボを押す':
         answer10A.classList.remove('hidden');
         currentAnswer = answer10A;
         nextQuestion = question11;
-        break;
+        preSection.push({ section: question10, isQestion: true });        break;
       
       case '開発仲間とオンラインもくもく会を開催':
         answer10B.classList.remove('hidden');
         currentAnswer = answer10B;
         nextQuestion = question11;
-        break;
+        preSection.push({ section: question10, isQestion: true });        break;
       
       case '英語圏の友達を作りに行く':
         answer11A.classList.remove('hidden');
         currentAnswer = answer11A;
         nextQuestion = question12;
-        break;
+        preSection.push({ section: question11, isQestion: true });        break;
       
       case 'OK！Google翻訳大先生！':
         answer11B.classList.remove('hidden');
         currentAnswer = answer11B;
         nextQuestion = question12;
-        break;
+        preSection.push({ section: question11, isQestion: true });        break;
       
       case '名詞を使う、配列など複数の値は複数形にすること':
         answer12A.classList.remove('hidden');
         currentAnswer = answer12A;
         nextQuestion = question13;
-        break;
+        preSection.push({ section: question12, isQestion: true });        break;
       
       case '好きな猫の毛柄からランダムに':
         answer12B.classList.remove('hidden');
         currentAnswer = answer12B;
         nextQuestion = question13;
-        break;
+        preSection.push({ section: question12, isQestion: true });        break;
       
       // case 'グラフ描画職人を雇う':
       //   answer13A.classList.remove('hidden');
@@ -268,7 +279,7 @@ choices.forEach(choice => {
         answer13A.classList.remove('hidden');
         currentAnswer = answer13A;
         nextQuestion = epilogue;
-
+        preSection.push({ section: question13, isQestion: true });
         nextBtn.textContent = 'ゴール！';
         break;
 
@@ -276,10 +287,9 @@ choices.forEach(choice => {
         answer13B.classList.remove('hidden');
         currentAnswer = answer13B;
         nextQuestion = epilogue;
-        
+        preSection.push({ section: question13, isQestion: true });        
         nextBtn.textContent = 'ゴール！';
         break;
-      
     }
   });
 });
@@ -288,14 +298,17 @@ choices.forEach(choice => {
 nextBtn.addEventListener('click', () => {
   currentAnswer.classList.add('hidden');
   nextQuestion.classList.remove('hidden');
-  next.classList.add('hidden');
+  nextBtn.classList.add('hidden');
+
+  // 現在の表示を保存
+  preSection.push({ section: currentAnswer, isQestion: false });
 
   if (nextQuestion === epilogue) {
     questionNo.textContent = 'Goooal!!';
     return;
   }
 
-  questionNo.children[1].textContent = (questionNo.children[1].textContent * 1) + 1;
+  questionNo.children[1].textContent = nextQuestion.dataset.no;
 });
 
 // TOPへ戻る
@@ -303,12 +316,36 @@ home.addEventListener('click', () => {
   window.location.reload();
 });
 
+// おしまいボタン
 finishBtn.addEventListener('click', () => {
   window.location.reload();
 });
 
+// ヘッダークリック
 header.addEventListener('click', () => {
   window.location.reload();
+});
+
+// 戻るボタン
+backBtn.addEventListener('click', () => {
+  currentAnswer.classList.add('hidden');
+  nextQuestion.classList.add('hidden');
+
+  currentAnswer = preSection[preSection.length - 1].section;
+  currentAnswer.classList.remove('hidden');
+
+  if (!preSection[preSection.length - 1].isQestion) {
+    nextBtn.classList.remove('hidden');
+  } else {
+    nextBtn.classList.add('hidden');
+    questionNo.children[1].textContent = currentAnswer.dataset.no;
+  }
+
+  preSection.splice(preSection.length - 1, 1);
+
+  if (preSection.length < 1) {
+    backBtn.classList.add('hidden');
+  }
 });
 
 
