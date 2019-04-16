@@ -262,9 +262,9 @@ footer a {
 header > h1 > a,
 header > p > a,
 .choices li a,
-.next > a,
-#start > a,
-.finish > a {
+.next,
+#start,
+.finish {
   text-decoration: none;
   color: #fff;
 }
