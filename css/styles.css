@@ -248,13 +248,6 @@ footer a {
   cursor: pointer;
 }
 
-/* .choices li:active {
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-  border-bottom: none;
-} */
-
 .choices li:not(:last-child) {
   margin-right: 60px;
 }
