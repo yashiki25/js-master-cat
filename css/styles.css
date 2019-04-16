@@ -128,7 +128,10 @@ strong {
   cursor: pointer;
 }
 
-#start:active {
+#start:active,
+.next:active,
+.finish:active,
+.choices li:active {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
@@ -175,6 +178,7 @@ footer a {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
   border-bottom: solid 3px #2c8a8f;
   border-radius: 50%;
+  line-height: 90px;
   text-decoration: none;
   text-align: center;
   font-size: 17px;
@@ -186,9 +190,8 @@ footer a {
   cursor: pointer;
 }
 
-.event1 > button.next {
-  width: 130px;
-  height: 130px;
+.event1 > .next {
+  width: 210px;
 }
 
 .finish {
@@ -201,7 +204,7 @@ footer a {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
   border-bottom: solid 3px #2c8a8f;
   border-radius: 50%;
-  /* line-height: 120px; */
+  line-height: 120px;
   text-decoration: none;
   text-align: center;
   font-size: 17px;
@@ -245,12 +248,12 @@ footer a {
   cursor: pointer;
 }
 
-.choices li:active {
+/* .choices li:active {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   border-bottom: none;
-}
+} */
 
 .choices li:not(:last-child) {
   margin-right: 60px;
@@ -259,8 +262,8 @@ footer a {
 header > h1 > a,
 header > p > a,
 .choices li a,
-button.next > a,
-button#start > a,
+.next > a,
+#start > a,
 .finish > a {
   text-decoration: none;
   color: #fff;
@@ -287,6 +290,7 @@ button#start > a,
   width: 30%;
 }
 
+.answer5-a a,
 .answer6-a a {
   color: #3fc1c9;
 }
